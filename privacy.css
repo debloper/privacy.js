@@ -7,3 +7,12 @@ privacy {
 	border: 1px ridge;
 	position: relative;
 }
+
+privacy #provision,
+privacy #perversion,
+privacy #persistence {
+	width: 100%;
+	height: 100%;
+	display: table;
+	position: absolute;
+}
