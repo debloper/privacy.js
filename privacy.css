@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+privacy {
+	width: 256px;
+	height: 256px;
+	display: block;
+	border: 1px ridge;
+	position: relative;
+}
