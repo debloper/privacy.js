@@ -22,11 +22,12 @@ privacy.setupNodes = function (ids, parent) {
 		parent.appendChild(privacy.newNode(ids[i]));
 	}
 }
-privacy.setupNodes(privacy.ids.main, privacy.NODE);
+privacy.arrangeNodes = function (nodes) {
+	privacy.setupNodes(nodes.main, privacy.NODE);
+	for ( var i in nodes ) {
+		if (i == "main") continue;
+		privacy.setupNodes(nodes[i], document.getElementById(i));
+	}
+}
 
-privacy.PROVISION = document.getElementById("provision");
-privacy.PERVERSION = document.getElementById("perversion");
-privacy.PERSISTENCE = document.getElementById("persistence");
-privacy.setupNodes(privacy.ids.provision, privacy.PROVISION);
-privacy.setupNodes(privacy.ids.perversion, privacy.PERVERSION);
-privacy.setupNodes(privacy.ids.persistence, privacy.PERSISTENCE);
+privacy.arrangeNodes(privacy.ids);		// Let's fire-up the chain-cracker!
