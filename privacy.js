@@ -8,8 +8,13 @@ privacy.NODE = document.getElementsByTagName("privacy").item(0);
 privacy.ids = {};
 privacy.ids.main = [ "provision", "perversion", "persistence" ];
 privacy.ids.provision = [ "provision_main" ];
-privacy.ids.perversion = [ "perversion_top", "perversion_middle", "perversion_bottom" ];
-privacy.ids.persistence = [ "persistence_1st", "persistence_2nd", "persistence_3rd", "persistence_4th" ];
+privacy.ids.perversion =
+[	"perversion_00", "perversion_01", "perversion_02",
+			"perversion_10", 	"perversion_11",
+	"perversion_20", "perversion_21", "perversion_22"	];
+privacy.ids.persistence =
+[	"persistence_1st", "persistence_2nd",
+	"persistence_3rd", "persistence_4th"	];
 
 privacy.newNode = function (id) {
 	var e = document.createElement("div");
