@@ -9,12 +9,12 @@ privacy.ids = {};
 privacy.ids.main = [ "provision", "perversion", "persistence" ];
 privacy.ids.provision = [ "provision_main" ];
 privacy.ids.perversion =
-[	"perversion_00", "perversion_01", "perversion_02",
-			"perversion_10", 	"perversion_11",
-	"perversion_20", "perversion_21", "perversion_22"	];
+[	"perversion_00", "perversion_4", "perversion_01",
+			"perversion_2", 	"perversion_1",
+	"perversion_10", "perversion_8", "perversion_11"	];
 privacy.ids.persistence =
-[	"persistence_1st", "persistence_2nd",
-	"persistence_3rd", "persistence_4th"	];
+[	"persistence_0", "persistence_12",
+	"persistence_1", "persistence_3"	];
 
 privacy.newNode = function (id) {
 	var e = document.createElement("div");
@@ -50,16 +50,16 @@ privacy.render.perversion = function () {
 	var val = privacy.NODE.getAttribute("perversion");
 	var hidden = { "visibility" : "hidden" };
 	if ( val/8 >= 1 ) {
-		privacy.changeBg("perversion_21", hidden);
+		privacy.changeBg("perversion_8", hidden);
 		val = val%8;
 	} if ( val/4 >= 1 ) {
-		privacy.changeBg("perversion_01", hidden);
+		privacy.changeBg("perversion_4", hidden);
 		val = val%4;
 	} if ( val/2 >= 1 ) {
-		privacy.changeBg("perversion_10", hidden);
+		privacy.changeBg("perversion_2", hidden);
 		val = val%2;
 	} if ( val >= 1 ) {
-		privacy.changeBg("perversion_11", hidden);
+		privacy.changeBg("perversion_1", hidden);
 		// We can use a for-loop here more efficiently. This is miserable!
 	}
 }
@@ -67,13 +67,13 @@ privacy.render.persistence = function () {
 	var val = privacy.NODE.getAttribute("persistence");
 	var hidden = { "visibility" : "hidden" };
 	if ( val <= 12 ) {
-		privacy.changeBg("persistence_2nd", hidden);
+		privacy.changeBg("persistence_12", hidden);
 	} if ( val <= 3 ) {
-		privacy.changeBg("persistence_4th", hidden);
+		privacy.changeBg("persistence_3", hidden);
 	} if ( val <= 1 ) {
-		privacy.changeBg("persistence_3rd", hidden);
+		privacy.changeBg("persistence_1", hidden);
 	} if ( val <= 0 ) {
-		privacy.changeBg("persistence_1st", hidden);
+		privacy.changeBg("persistence_0", hidden);
 	}
 //	privacy.changeBg(document.getElementById("persistence").childNodes.item(0).id, { "visibility" : "hidden" });
 }

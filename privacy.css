@@ -29,37 +29,37 @@ privacy #perversion_00 {
 	width: 120px; height: 120px;
 	background-position: 0 0;
 }
-privacy #perversion_01 {
+privacy #perversion_4 {
 	top: 0; left: 120px;
 	width: 16px; height: 120px;
 	background-position: 136px 0;
 }
-privacy #perversion_02 {
+privacy #perversion_01 {
 	top: 0; left: 136px;
 	width: 120px; height: 120px;
 	background-position: 120px 0;
 }
-privacy #perversion_10 {
+privacy #perversion_2 {
 	top: 120px; left: 0;
 	width: 128px; height: 16px;
 	background-position: 0 904px;
 }
-privacy #perversion_11 {
+privacy #perversion_1 {
 	top: 120px; left: 128px;
 	width: 128px; height: 16px;
 	background-position: 128px 904px;
 }
-privacy #perversion_20 {
+privacy #perversion_10 {
 	top: 136px; left: 0;
 	width: 120px; height: 120px;
 	background-position: 0 888px;
 }
-privacy #perversion_21 {
+privacy #perversion_8 {
 	top: 136px; left: 120px;
 	width: 16px; height: 120px;
 	background-position: 136px 888px;
 }
-privacy #perversion_22 {
+privacy #perversion_11 {
 	top: 136px; left: 136px;
 	width: 120px; height: 120px;
 	background-position: 120px 888px;
@@ -67,19 +67,19 @@ privacy #perversion_22 {
 privacy #persistence > * {
 	width: 128px; height: 128px;
 }
-privacy #persistence_1st {
+privacy #persistence_0 {
 	top: 0; left: 0;
 	background-position: 0 768px;
 }
-privacy #persistence_2nd {
+privacy #persistence_12 {
 	top: 0; left: 128px;
 	background-position: 128px 768px;
 }
-privacy #persistence_3rd {
+privacy #persistence_1 {
 	top: 128px; left: 0;
 	background-position: 0 640px;
 }
-privacy #persistence_4th {
+privacy #persistence_3 {
 	top: 128px; left: 128px;
 	background-position: 128px 640px;
 }
