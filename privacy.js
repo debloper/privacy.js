@@ -41,41 +41,27 @@ privacy.changeBg = function (id, pos) {
 }
 privacy.render = {};
 privacy.render.provision = function () {
-	var val = privacy.NODE.getAttribute("provision");
-	if ( val == "open" ) {
+	if ( privacy.NODE.getAttribute("provision") == "open" ) {
 		privacy.changeBg("provision_main", { "backgroundPosition" : "0 256px" });
 	}
 }
 privacy.render.perversion = function () {
 	var val = privacy.NODE.getAttribute("perversion");
-	var hidden = { "visibility" : "hidden" };
-	if ( val/8 >= 1 ) {
-		privacy.changeBg("perversion_8", hidden);
-		val = val%8;
-	} if ( val/4 >= 1 ) {
-		privacy.changeBg("perversion_4", hidden);
-		val = val%4;
-	} if ( val/2 >= 1 ) {
-		privacy.changeBg("perversion_2", hidden);
-		val = val%2;
-	} if ( val >= 1 ) {
-		privacy.changeBg("perversion_1", hidden);
-		// We can use a for-loop here more efficiently. This is miserable!
+	for ( var i = 8; i >= 1; i /= 2 ) {
+		if ( val/i >= 1 ) {
+			privacy.changeBg("perversion_" + i, { "visibility" : "hidden" });
+			val %= i;
+		}
 	}
 }
 privacy.render.persistence = function () {
 	var val = privacy.NODE.getAttribute("persistence");
-	var hidden = { "visibility" : "hidden" };
-	if ( val <= 12 ) {
-		privacy.changeBg("persistence_12", hidden);
-	} if ( val <= 3 ) {
-		privacy.changeBg("persistence_3", hidden);
-	} if ( val <= 1 ) {
-		privacy.changeBg("persistence_1", hidden);
-	} if ( val <= 0 ) {
-		privacy.changeBg("persistence_0", hidden);
+	var timeSpan = [ 12, 3, 1, 0 ];
+	for ( var i in timeSpan ) {
+		if ( val <= timeSpan[i] ) {
+			privacy.changeBg("persistence_" + timeSpan[i], { "visibility" : "hidden" });
+		} else return true;
 	}
-//	privacy.changeBg(document.getElementById("persistence").childNodes.item(0).id, { "visibility" : "hidden" });
 }
 privacy.parsePrivacy = function () {
 	privacy.render.provision();
