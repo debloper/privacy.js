@@ -16,9 +16,11 @@ demo.update.perversion = function (obj) {
 	if (obj.checked) {
 		val = parseInt(privacy.NODE.getAttribute("perversion")) + parseInt(obj.value);
 		privacy.NODE.setAttribute("perversion", val);
+		obj.parentNode.className = "active";
 	} else {
 		val = parseInt(privacy.NODE.getAttribute("perversion")) - parseInt(obj.value);
 		privacy.NODE.setAttribute("perversion", val);
+		obj.parentNode.className = "passive";
 	}
 	privacy.changeBg("perversion_" + parseInt(obj.value),  { "visibility" : "visible" })
 	privacy.render.perversion();

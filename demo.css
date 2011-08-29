@@ -46,19 +46,25 @@ form section .action {
 	border-radius: 8px;
 }
 form section .action label {
-	color: #444;
 	width: 96px;
 	margin: 5px auto;
 	display: inline-block;
 	cursor: pointer;
 	border: 1px ridge #798;
 	border-radius: 8px;
-	background: #fff;
 	text-align: center;
 }
 form section .action label:hover {
 	color: #fff;
 	background: #8c8;
+}
+form section .action .active {
+	color: #fff;
+	background: #c66;
+}
+form section .action .passive {
+	color: #444;
+	background: #fff;
 }
 form section .phraud {
 	float: right;
