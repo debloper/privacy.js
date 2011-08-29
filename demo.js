@@ -32,16 +32,23 @@ demo.update.persistence = function (val) {
 	privacy.render.persistence();
 }
 
-demo.toggle.phraud = function (obj) {
+demo.toggle.phraud = function (obj, target) {
 	var classes = obj.parentNode.className;
+	var targets = document.getElementById(target).childNodes;
 	if (obj.checked) {
 		classes = classes.replace(/\bphraudOff\b/,'');
 		classes += " phraudOn";
-		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Phrauds!"
+		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Phrauds!";
+		for ( var i in targets ) {
+			targets.item(i).style.backgroundImage = "url(phraud.png)";
+		}
 	} else {
 		classes = classes.replace(/\bphraudOn\b/,'');
 		classes += " phraudOff";
-		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Frauds?"
+		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Frauds?";
+		for ( var i in targets ) {
+			targets.item(i).style.backgroundImage = "url(privacy.png)";
+		}
 	}
 	obj.parentNode.className = classes;
 }
