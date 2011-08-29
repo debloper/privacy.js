@@ -18,8 +18,8 @@
 <form name="inputPanel" id="inputPanel">
   <section>
     <div class="detail">Provision:</div>
-    <label class="phraud">Frauds?
-      <input type="checkbox" value="0">
+    <label class="phraud phraudOff"><span>Frauds?</span>
+      <input type="checkbox" onChange="demo.toggle.phraud(this)">
     </label>
     <label class="action">
     User controlled data exposure:
@@ -32,8 +32,8 @@
   <br />
   <section>
     <div class="detail">Perversion:</div>
-    <label class="phraud">Frauds?
-      <input type="checkbox">
+    <label class="phraud phraudOff"><span>Frauds?</span>
+      <input type="checkbox" onChange="demo.toggle.phraud(this)">
     </label>
     <label class="action"><input type="hidden">
     Types of user-data exposure to various media:
@@ -54,8 +54,8 @@
   <br />
   <section>
     <div class="detail">Persistence:</div>
-    <label class="phraud">Frauds?
-      <input type="checkbox">
+    <label class="phraud phraudOff"><span>Frauds?</span>
+      <input type="checkbox" onChange="demo.toggle.phraud(this)">
     </label>
     <label class="action">
     Storage period of user data:

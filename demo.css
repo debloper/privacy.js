@@ -63,10 +63,18 @@ form section .action label:hover {
 form section .phraud {
 	float: right;
 	cursor: pointer;
-	background: #69c;
 	border-radius: 0 8px;
+}
+form section .phraudOn {
+	background: #c66;
+}
+form section .phraudOff {
+	background: #69c;
 }
 form section .phraud:hover {
 	color: #c30;
 	background: #fe6;
+}
+form section .phraud:active {
+	color: #ccc;
 }

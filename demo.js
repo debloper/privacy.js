@@ -4,6 +4,7 @@
 
 demo = {};
 demo.update = {};
+demo.toggle = {};
 
 demo.update.provision = function (val) {
 	privacy.changeBg("provision_main", { "backgroundPosition" : "0 512px" });
@@ -29,4 +30,18 @@ demo.update.persistence = function (val) {
 	}
 	privacy.NODE.setAttribute("persistence", val);
 	privacy.render.persistence();
+}
+
+demo.toggle.phraud = function (obj) {
+	var classes = obj.parentNode.className;
+	if (obj.checked) {
+		classes = classes.replace(/\bphraudOff\b/,'');
+		classes += " phraudOn";
+		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Phrauds!"
+	} else {
+		classes = classes.replace(/\bphraudOn\b/,'');
+		classes += " phraudOff";
+		obj.parentNode.getElementsByTagName("span").item(0).innerHTML = "Frauds?"
+	}
+	obj.parentNode.className = classes;
 }
