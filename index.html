@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>Privacy Icon - Prototype</title>
+<link rel="stylesheet" href="demo.css" />
 <link rel="stylesheet" href="privacy.css" />
 <script defer src="privacy.js"></script>
 </head>
@@ -12,6 +13,59 @@
 	provision = "open"
 	perversion = "0xF"
 	persistence = "12"
-/>
+></privacy>
+<form name="inputPanel" id="inputPanel">
+  <section>
+    <div class="detail">Provision:</div>
+    <label class="phraud">Frauds?
+      <input type="checkbox" value="0">
+    </label>
+    <label class="action">
+    User controlled data exposure:
+      <select>
+        <option>Nope! (Open)</option>
+        <option>Yup! (Moderated)</option>
+      </select>
+    </label>
+  </section>
+  <br />
+  <section>
+    <div class="detail">Perversion:</div>
+    <label class="phraud">Frauds?
+      <input type="checkbox">
+    </label>
+    <label class="action"><input type="hidden">
+    Types of user-data exposure to various media:
+      <label>Internal
+        <input type="checkbox">
+      </label>
+      <label>External
+        <input type="checkbox">
+      </label>
+      <label>Federal
+        <input type="checkbox">
+      </label>
+      <label>Security
+        <input type="checkbox">
+      </label>
+    </label>
+  </section>
+  <br />
+  <section>
+    <div class="detail">Persistence:</div>
+    <label class="phraud">Frauds?
+      <input type="checkbox">
+    </label>
+    <label class="action">
+    Storage period of user data:
+      <select>
+        <option>12+ Months</option>
+        <option>3+ Months</option>
+        <option>1+ Months</option>
+        <option>Momentary</option>
+      </select>
+    </label>
+  </section>
+</form>
 </body>
 </html>

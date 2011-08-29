@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {
+	width: 960px;
+	margin: auto;
+	background: #f8f8f8;
+	font-family: Verdana, Geneva, sans-serif;
+}
+form {
+	top: -256px;
+	left: 320px;
+	width: 640px;
+	position: relative;
+}
+form section {
+	color: #fff;
+	background: #fff;
+	border: 1px ridge #ddd;
+	border-radius: 8px;
+	font-size: 20px;
+}
+form section label {
+	padding: 8px 20px;
+}
+form section select {
+	color: #444;
+	width: 240px;
+	float: right;
+	margin: -2px;
+	font: 20px Verdana, Geneva, sans-serif;
+}
+form section input[type="checkbox"] { display: none; }
+form section .detail {
+	color: #444;
+	padding: 10px 20px;
+	display: inline-block;
+	font-weight: bold;
+	text-shadow: 1px 1px 5px #ccc;
+}
+form section .action {
+	color: #363;
+	width: 90%;
+	margin: 10px auto;
+	display: block;
+	background: #bdb;
+	border-radius: 8px;
+}
+form section .action label {
+	color: #444;
+	width: 96px;
+	margin: 5px auto;
+	display: inline-block;
+	cursor: pointer;
+	border: 1px ridge #798;
+	border-radius: 8px;
+	background: #fff;
+	text-align: center;
+}
+form section .action label:hover {
+	color: #fff;
+	background: #8c8;
+}
+form section .phraud {
+	float: right;
+	cursor: pointer;
+	background: #69c;
+	border-radius: 0 8px;
+}
+form section .phraud:hover {
+	color: #c30;
+	background: #fe6;
+}
