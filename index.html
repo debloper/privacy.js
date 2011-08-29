@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="demo.css" />
 <link rel="stylesheet" href="privacy.css" />
 <script defer src="privacy.js"></script>
+<script defer src="demo.js"></script>
 </head>
 
 <body>
@@ -22,9 +23,9 @@
     </label>
     <label class="action">
     User controlled data exposure:
-      <select>
-        <option>Nope! (Open)</option>
-        <option>Yup! (Moderated)</option>
+      <select onChange="demo.update.provision(this.value);">
+        <option value="open">Nope! (Open)</option>
+        <option value="mod">Yup! (Moderated)</option>
       </select>
     </label>
   </section>
@@ -37,16 +38,16 @@
     <label class="action"><input type="hidden">
     Types of user-data exposure to various media:
       <label>Internal
-        <input type="checkbox">
+        <input type="checkbox" checked="checked" value="0x1" onChange="demo.update.perversion(this);">
       </label>
       <label>External
-        <input type="checkbox">
+        <input type="checkbox" checked="checked" value="0x2" onChange="demo.update.perversion(this);">
       </label>
       <label>Federal
-        <input type="checkbox">
+        <input type="checkbox" checked="checked" value="0x4" onChange="demo.update.perversion(this);">
       </label>
       <label>Security
-        <input type="checkbox">
+        <input type="checkbox" checked="checked" value="0x8" onChange="demo.update.perversion(this);">
       </label>
     </label>
   </section>
@@ -58,11 +59,12 @@
     </label>
     <label class="action">
     Storage period of user data:
-      <select>
-        <option>12+ Months</option>
-        <option>3+ Months</option>
-        <option>1+ Months</option>
-        <option>Momentary</option>
+      <select onChange="demo.update.persistence(this.value);">
+        <option value="12">Upto 12 Months</option>
+        <option value="3">Upto 3 Months</option>
+        <option value="1">Upto 1 Months</option>
+        <option value="0">Momentary</option>
+        <option value="24">More than a Year</option>
       </select>
     </label>
   </section>
