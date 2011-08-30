@@ -6,11 +6,41 @@ body {
 	background: #f8f8f8;
 	font-family: Verdana, Geneva, sans-serif;
 }
+header, footer {
+	width: 100%;
+	box-shadow: 5px 5px 50px #ccc;
+	background: -moz-repeating-linear-gradient(135deg, #eee, #eee 1px, #f8f8f8 1px, #f8f8f8 4px);
+/*	background: -webkit-repeating-linear-gradient(135deg, #eee, #eee 1px, #f8f8f8 1px, #f8f8f8 4px); < Renders funny, try it! */
+}
+header {
+	height: 160px;
+	margin: 0 0 96px;
+}
+footer {
+	bottom: 0;
+	float: left;
+	margin: 96px 0 0;
+	height: 80px;
+}
+aside {
+	width: 256px;
+	float: left;
+}
+aside #markup {
+	width: 100%;
+	height: 96px;
+	margin: 24	px 0 12px;
+	background: #ddd;
+	border: 1px ridge #eee;
+	border-radius: 5px;
+}
+aside p {
+	color: #c33;
+}
 form {
-	top: -256px;
 	left: 320px;
 	width: 640px;
-	position: relative;
+	float: right;
 }
 form section {
 	color: #fff;
