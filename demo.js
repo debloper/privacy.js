@@ -4,7 +4,6 @@
 
 demo = {};
 demo.update = {};
-demo.toggle = {};
 
 demo.update.provision = function (val) {
 	privacy.changeBg("provision_main", { "backgroundPosition" : "0 512px" });
@@ -34,7 +33,7 @@ demo.update.persistence = function (val) {
 	privacy.render.persistence();
 }
 
-demo.toggle.phraud = function (obj, target) {
+demo.update.phraud = function (obj, target) {
 	var classes = obj.parentNode.className;
 	var targets = document.getElementById(target).childNodes;
 	if (obj.checked) {
