@@ -9,6 +9,7 @@ demo.update.provision = function (val) {
 	privacy.changeBg("provision_main", { "backgroundPosition" : "0 512px" });
 	privacy.NODE.setAttribute("provision", val);
 	privacy.render.provision();
+	demo.update.markup();
 }
 demo.update.perversion = function (obj) {
 	var val;
@@ -23,6 +24,7 @@ demo.update.perversion = function (obj) {
 	}
 	privacy.changeBg("perversion_" + parseInt(obj.value),  { "visibility" : "visible" })
 	privacy.render.perversion();
+	demo.update.markup();
 }
 demo.update.persistence = function (val) {
 	var timeSpan = [ 12, 3, 1, 0 ];
@@ -31,6 +33,7 @@ demo.update.persistence = function (val) {
 	}
 	privacy.NODE.setAttribute("persistence", val);
 	privacy.render.persistence();
+	demo.update.markup();
 }
 
 demo.update.phraud = function (obj, target) {
@@ -52,4 +55,16 @@ demo.update.phraud = function (obj, target) {
 		}
 	}
 	obj.parentNode.className = classes;
+	demo.update.markup();
 }
+demo.update.markup = function () {
+	var node = privacy.NODE, attrib = privacy.ids.main,
+	provision = "<br />\tprovision=&quot;" + node.getAttribute(attrib[0]) + "&quot;",
+	perversion = "<br />\tperversion=&quot;" + node.getAttribute(attrib[1]) + "&quot;",
+	persistence = "<br />\tpersistence=&quot;" + node.getAttribute(attrib[2]) + "&quot;";
+	var innerHTML = "&lt;privacy" + provision + perversion + persistence + " &gt;<br />&lt;\\privacy&gt;";
+	//alert(innerHTML);
+	document.getElementById("markup").innerHTML = innerHTML;
+}
+
+demo.update.markup();
