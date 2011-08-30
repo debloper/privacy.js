@@ -62,7 +62,7 @@ demo.update.markup = function () {
 	provision = "<br />\tprovision=&quot;" + node.getAttribute(attrib[0]) + "&quot;",
 	perversion = "<br />\tperversion=&quot;" + node.getAttribute(attrib[1]) + "&quot;",
 	persistence = "<br />\tpersistence=&quot;" + node.getAttribute(attrib[2]) + "&quot;";
-	var innerHTML = "&lt;privacy" + provision + perversion + persistence + " &gt;<br />&lt;\\privacy&gt;";
+	var innerHTML = "&lt;privacy" + provision + perversion + persistence + " &gt;<br />&lt;\/privacy&gt;";
 	//alert(innerHTML);
 	document.getElementById("markup").innerHTML = innerHTML;
 }
