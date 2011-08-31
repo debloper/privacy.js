@@ -1,4 +1,10 @@
 @charset "utf-8";
+@font-face {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 100;
+  src: url('http://themes.googleusercontent.com/static/fonts/raleway/v1/b1OWH1QXUjVxHio22EJrRQ.woff') format('woff');
+}
 
 body {
 	width: 960px;
@@ -6,11 +12,90 @@ body {
 	background: #f8f8f8;
 	font-family: Verdana, Geneva, sans-serif;
 }
+header, footer {
+	width: 100%;
+	box-shadow: 5px 5px 50px #ccc;
+	background: -moz-repeating-linear-gradient(135deg, #eee, #eee 1px, #f8f8f8 1px, #f8f8f8 4px);
+/*	background: -webkit-repeating-linear-gradient(135deg, #eee, #eee 1px, #f8f8f8 1px, #f8f8f8 4px); < Renders funny, try it! */
+}
+header {
+	height: 160px;
+	margin: 0 0 96px;
+}
+hgroup h1 {
+	color: #999;
+	margin: auto;
+	padding: 16px 32px;
+	font: 72px Raleway;
+}
+hgroup h5 {
+	color: #999;
+	margin: auto;
+	padding: 0 32px;
+	font: 16px "Courier New", Courier, monospace;
+}
+header .download {
+	float: right;
+	margin: -40px 24px;
+}
+header .download a {
+	color: #369;
+	float: right;
+	margin: 0 8px;
+	padding: 8px 16px;
+	background: rgba(0,0,0,0.1);
+	border: 1px ridge #ccc;
+	border-radius: 4px;
+	font-size: 80%;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+header .download a:hover {
+	color: #fff;
+	border: 1px ridge #69c;
+	background: #69c;
+}
+footer {
+	bottom: 0;
+	float: left;
+	margin: 96px 0 0;
+	height: 80px;
+	display: table;
+	text-align: center;
+}
+footer a {
+	color: #933;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: Raleway;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #c00;
+	text-shadow: 0 0 20px #ccc, 0 0 5px #fff, 0 0 1px #666;
+}
+aside {
+	width: 256px;
+	float: left;
+}
+aside #markup {
+	width: 100%;
+	height: 80px;
+	padding: 8px 0;
+	margin: 24px 0 12px;
+	background: #ddd;
+	border: 1px ridge #eee;
+	border-radius: 5px;
+}
+aside p {
+	color: #c33;
+}
 form {
-	top: -256px;
 	left: 320px;
 	width: 640px;
-	position: relative;
+	float: right;
 }
 form section {
 	color: #fff;

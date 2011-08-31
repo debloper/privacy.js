@@ -10,16 +10,34 @@
 </head>
 
 <body>
+<header>
+  <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+  <div style="float: right; margin: 16px 32px;">
+    <a href="http://twitter.com/share" class="twitter-share-button" target="_blank" data-count="vertical">Tweet</a>
+  </div>
+  <hgroup>
+    <h1>Privacy.JS</h1>
+    <h5>Define Privacy, and spread it across the web!</h5>
+  </hgroup>
+  <div class="download">
+    <a href="#">Download<br /><small>Dev-Package</small></a>
+    <a href="#">Download<br /><small>Min-Package</small></a>
+  </div>
+</header>
+<aside>
 <privacy
 	provision = "open"
 	perversion = "0xF"
 	persistence = "12"
 ></privacy>
+<pre id="markup"></pre>
+<p>▲ present markup in action.</p>
+</aside>
 <form name="inputPanel" id="inputPanel">
   <section>
     <div class="detail">Provision:</div>
     <label class="phraud phraudOff"><span>Frauds?</span>
-      <input type="checkbox" onChange="demo.toggle.phraud(this, 'provision')">
+      <input type="checkbox" onChange="demo.update.phraud(this, 'provision')">
     </label>
     <label class="action">
     User controlled data exposure:
@@ -33,7 +51,7 @@
   <section>
     <div class="detail">Perversion:</div>
     <label class="phraud phraudOff"><span>Frauds?</span>
-      <input type="checkbox" onChange="demo.toggle.phraud(this, 'perversion')">
+      <input type="checkbox" onChange="demo.update.phraud(this, 'perversion')">
     </label>
     <label class="action"><input type="hidden">
     Types of user-data exposure to various media:
@@ -55,7 +73,7 @@
   <section>
     <div class="detail">Persistence:</div>
     <label class="phraud phraudOff"><span>Frauds?</span>
-      <input type="checkbox" onChange="demo.toggle.phraud(this, 'persistence')">
+      <input type="checkbox" onChange="demo.update.phraud(this, 'persistence')">
     </label>
     <label class="action">
     Storage period of user data:
@@ -69,5 +87,19 @@
     </label>
   </section>
 </form>
+<footer>
+  <a href="https://www.drumbeat.org/project/privacy-icons/" target="_blank" title="Privacy @ Drumbeat">
+    Privacy Icons<br /><small>@ Drumbeat.org</small>
+  </a>
+  <a href="http://www.azarask.in/blog/post/making-privacy-policies-not-suck/" target="_blank" title="Aza Raskin's Writeup">
+    Aza on Privacy<br /><small>(project inspiration)</small>
+  </a>
+  <a href="http://debloper.blogspot.com/p/privacy-icon.html" target="_blank" title="Debloper's Take on Privacy">
+    Draft o' Proposal<br /><small>&mdash; by Debloper</small>
+  </a>
+  <a href="https://github.com/debloper/privacy.js/issues" target="_blank" title="Report bugs/Request pull">
+    Rant this Project<br /><small>a.k.a - &quot;Report Issues&quot;</small>
+  </a>
+</footer>
 </body>
 </html>
