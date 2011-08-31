@@ -34,6 +34,28 @@ hgroup h5 {
 	padding: 0 32px;
 	font: 16px "Courier New", Courier, monospace;
 }
+header .download {
+	float: right;
+	margin: -40px 24px;
+}
+header .download a {
+	color: #369;
+	float: right;
+	margin: 0 8px;
+	padding: 8px 16px;
+	background: rgba(0,0,0,0.1);
+	border: 1px ridge #ccc;
+	border-radius: 4px;
+	font-size: 80%;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+header .download a:hover {
+	color: #fff;
+	border: 1px ridge #69c;
+	background: #69c;
+}
 footer {
 	bottom: 0;
 	float: left;
