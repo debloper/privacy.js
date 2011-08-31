@@ -61,6 +61,20 @@ footer {
 	float: left;
 	margin: 96px 0 0;
 	height: 80px;
+	display: table;
+	text-align: center;
+}
+footer a {
+	color: #933;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	font-family: Raleway;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #c00;
+	text-shadow: 0 0 20px #ccc, 0 0 5px #fff, 0 0 1px #666;
 }
 aside {
 	width: 256px;
